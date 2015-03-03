@@ -1147,6 +1147,9 @@
     <Content Include="Views\Shared\EditorTemplates\forumeditor.cshtml" />
     <Content Include="Views\Shared\customeditors\tinymceeditor.cshtml" />
     <Content Include="Views\Shared\_PrivateMessage.cshtml" />
+    <Content Include="Views\Members\ResetPassword.cshtml" />
+    <Content Include="Views\Members\PasswordResetSent.cshtml" />
+    <Content Include="Views\Members\PasswordChanged.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

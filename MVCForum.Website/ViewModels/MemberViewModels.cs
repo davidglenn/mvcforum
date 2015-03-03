@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using DataAnnotationsExtensions;
@@ -214,5 +215,26 @@ namespace MVCForum.Website.ViewModels
         [ForumMvcResourceDisplayName("Members.Label.ConfirmNewPassword")]
         [System.ComponentModel.DataAnnotations.Compare("NewPassword")]
         public string ConfirmPassword { get; set; }
+    }
+    
+    public class ResetPasswordViewModel
+    {
+        [Required]
+        public Guid? Id { get; set; }
+
+        [Required]
+        public string Token { get; set; }
+
+        [Required]
+        [StringLength(100, MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [ForumMvcResourceDisplayName("Members.Label.NewPassword")]
+        public string NewPassword { get; set; }
+
+        [DataType(DataType.Password)]
+        [ForumMvcResourceDisplayName("Members.Label.ConfirmNewPassword")]
+        [System.ComponentModel.DataAnnotations.Compare("NewPassword")]
+        public string ConfirmPassword { get; set; }
+
     }
 }
